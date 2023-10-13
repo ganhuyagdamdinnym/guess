@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "fakeId": 1,
+    "picture": "luffy.webp",
+    "chosen": false
+  },
+  {
+    "id": 2,
+    "fakeId": 2,
+    "picture": "luffy2.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 3,
+    "fakeId": 3,
+    "picture": "luffy3.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 3,
+    "fakeId": 4,
+    "picture": "luffy3.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 1,
+    "fakeId": 5,
+    "picture": "luffy.webp",
+    "chosen": false
+  },
+  {
+    "id": 2,
+    "fakeId": 6,
+    "picture": "luffy2.jpeg",
+    "chosen": false
+  }
+]
