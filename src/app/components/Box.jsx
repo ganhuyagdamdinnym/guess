@@ -1,9 +1,28 @@
 import { useState } from "react";
 
 export function Box(props) {
-  const { id, img, setCards, chosen, cards, index, setSaveid, saveid } = props;
+  const {
+    id,
+    img,
+    setCards,
+    chosen,
+    cards,
+    index,
+    setSaveid,
+    saveid,
+    clicked,
+    setClicked,
+    beforeclick,
+    setBeforeclick,
+  } = props;
   const [status, setStatus] = useState(false);
+  function clickedCount() {
+    console.log(clicked);
+  }
   function findCart(id) {
+    setClicked(clicked + 1);
+    setBeforeclick(index);
+    console.log("ghsafg", index);
     if (saveid == id) {
       let newCards = cards.map((card, ind) => {
         if (ind == index) {
@@ -15,11 +34,14 @@ export function Box(props) {
       });
       setCards(newCards);
       ///
-      alert("same");
-      let unguessedCards = cards.filter(({ id: cardId }) => cardId !== id);
-      setCards(unguessedCards);
-      setSaveid(-1);
+      setTimeout(() => {
+        //alert("Зураг таарсан");
+        let unguessedCards = cards.filter(({ id: cardId }) => cardId !== id);
+        setCards(unguessedCards);
+        setSaveid(-1);
+      }, 1000);
     } else if (saveid === -1) {
+      setClicked(clicked + 1);
       let newCards = cards.map((card, ind) => {
         if (ind == index) {
           card.chosen = true;
@@ -30,52 +52,56 @@ export function Box(props) {
       });
       setCards(newCards);
       setSaveid(id);
+    } else if (index == beforeclick) {
+      setClicked(clicked);
+      //alert("jjj");
     } else {
+      setClicked(clicked + 1);
       let newCards = cards.map((card, ind) => {
         if (ind == index) {
           card.chosen = true;
           setSaveid(id);
-        } else {
         }
         return card;
       });
       setCards(newCards);
-
-      //
-      setTimeout(function ()){  
-      setSaveid(-1);
-      let notguess = cards.map((card) => {
-       if (card.id !== 3333) {
-      card.chosen = false;
-      }
-      return card;
-      });
-         setCards(notguess);
-      },3000);
-      }
-
-
-
-     
+      setTimeout(() => {
+        setSaveid(-1);
+        let notguess = cards.map((card) => {
+          if (card.id !== 3333) {
+            card.chosen = false;
+          }
+          return card;
+        });
+        setCards(notguess);
+      }, 1000);
+    }
   }
 
   return (
     <div>
       {chosen ? (
-        <div onClick={() => findCart()}>
-          <img src={img} className="w-80 h-96" />
+        <div
+          className="w-64 h-56 border-black  border-2 rounded-xl "
+          onClick={() => findCart()}
+        >
+          <img src={img} className="w-64 h-52 rounded-xl" />
         </div>
       ) : (
         <div>
           {status ? (
             <div></div>
           ) : (
-            <div className="w-80 h-96 bg-black" onClick={() => findCart(id)}>
-              <img className="w-80 h-96  " src="onepiece.jpg" />
+            <div
+              className="w-64 h-56 bg-black rounded-xl"
+              onClick={() => findCart(id)}
+            >
+              <img className="w-64 h-56  rounded-xl" src="ritter.jpeg" />
             </div>
           )}
         </div>
       )}
+      <button onClick={() => clickedCount()}>click</button>
     </div>
   );
 }

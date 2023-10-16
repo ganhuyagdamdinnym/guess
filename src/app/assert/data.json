@@ -2,37 +2,73 @@
   {
     "id": 1,
     "fakeId": 1,
-    "picture": "luffy.webp",
+    "picture": "yellow.jpeg",
     "chosen": false
   },
   {
     "id": 2,
     "fakeId": 2,
-    "picture": "luffy2.jpeg",
+    "picture": "blue.jpeg",
     "chosen": false
   },
   {
     "id": 3,
     "fakeId": 3,
-    "picture": "luffy3.jpeg",
+    "picture": "green.jpeg",
     "chosen": false
   },
   {
     "id": 3,
     "fakeId": 4,
-    "picture": "luffy3.jpeg",
+    "picture": "green.jpeg",
     "chosen": false
   },
   {
     "id": 1,
     "fakeId": 5,
-    "picture": "luffy.webp",
+    "picture": "yellow.jpeg",
     "chosen": false
   },
   {
     "id": 2,
     "fakeId": 6,
-    "picture": "luffy2.jpeg",
+    "picture": "blue.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 4,
+    "fakeId": 7,
+    "picture": "red.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 4,
+    "fakeId": 8,
+    "picture": "red.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 5,
+    "fakeId": 9,
+    "picture": "marzipan.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 5,
+    "fakeId": 10,
+    "picture": "marzipan.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 6,
+    "fakeId": 11,
+    "picture": "gold.jpeg",
+    "chosen": false
+  },
+  {
+    "id": 6,
+    "fakeId": 12,
+    "picture": "gold.jpeg",
     "chosen": false
   }
 ]

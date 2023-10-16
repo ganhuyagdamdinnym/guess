@@ -8,6 +8,8 @@ export default function Home() {
 
   const [cards, setCards] = useState([])
   const [saveId, setSaveid] = useState(-1)
+  const [clicked, setClicked] = useState(0)
+  const [beforeclick, setBeforeclick] = useState()
 
 
 
@@ -32,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="w-screen  h-screen">
-      <div className="flex gap-4 flex-wrap justify-center items-center">
+      <div className="flex gap-10 flex-wrap justify-center items-center mt-20">
         {cards.map((element, index) => (
           <Box img={element.picture}
             id={element.id}
@@ -42,6 +44,10 @@ export default function Home() {
             cards={cards}
             saveid={saveId}
             setSaveid={setSaveid}
+            clicked={clicked}
+            setClicked={setClicked}
+            beforeclick={beforeclick}
+            setBeforeclick={setBeforeclick}
           />
         )
         )
